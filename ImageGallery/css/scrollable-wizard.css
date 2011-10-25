@@ -1,0 +1,157 @@
+
+#wizard {	
+	background:#131313;
+	font-size:12px;
+	height:555px;
+	margin:20px auto;	
+	width:800px;
+	overflow:hidden;
+	position:relative;
+	
+}  
+
+
+
+/* scrollable items */
+#wizard .items {
+	width:20000em;	
+	clear:both;	
+	position:absolute;	
+}
+
+/* single item */
+#wizard .page {	
+	padding:0px 0pxpx;
+	width:800px;
+	float:left;	
+}
+
+/* title */
+#wizard h2 {
+	border-bottom:1px dotted #ccc;
+	font-size:22px;
+	font-weight:normal;
+	margin:10px 0 0 0;
+	padding-bottom:15px;		
+}
+
+#wizard h2 em {
+	display:block;
+	font-size:14px;
+	color:#666;
+	font-style:normal;
+	margin-top:5px;
+}
+
+/* input fields 
+#wizard ul {
+	padding:0px !important;
+	margin:0px !important;
+}*/
+
+#wizard li {
+	list-style-type:none;
+	list-style-image:none;
+	margin-bottom:25px;	
+}
+
+#wizard label {
+	font-size:16px;	
+	display:block;
+}
+
+#wizard label strong {
+	color:#789;	
+	position:relative;
+	top:-1px;
+}
+
+#wizard label em {
+	font-size:11px;
+	color:#666;	
+	font-style:normal;
+}
+
+#wizard .text {
+	width:100%;
+	padding:5px;
+	border:1px solid #ccc;
+	color:#456;
+	letter-spacing:1px;
+}
+
+#wizard select {
+	border:1px solid #ccc;
+	width:94%;	
+	padding:4px;
+
+}
+
+#wizard label span {
+	color:#b8128f;
+	font-weight:bold;
+	position:relative;
+	top:4px;
+	font-size:20px;
+
+}
+
+#wizard .double label { 
+	width:50%;
+	float:left;
+}
+
+#wizard .double .text {
+	width:93%;	
+}
+
+#wizard .clearfix {
+	clear:left;
+	padding-top:10px;	
+}
+
+#wizard .right {
+	float:right;		
+}
+
+#wizard .error {
+	border:1px solid red;		
+}
+
+#wizard #status {
+	margin: 0 auto;
+	padding-left: 175px;
+	height:35px;
+	//padding-left:25px !important;
+}
+
+/*
+#status{
+	margin: 0 auto;
+	align: center; 
+	
+}*/
+
+#status li {
+	cursor: default ; 
+	list-style-type:none;
+	list-style-image:none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+	float:left;
+	color:#DDD;
+	padding:15px 30px;
+	background-image: url("./img/stripe.png");	
+	background-repeat:repeat-x;
+	background-repeat:repeat-y;
+}
+
+
+
+#status li.active {
+	background-color:#b8128f;
+	font-weight:normal;		
+}

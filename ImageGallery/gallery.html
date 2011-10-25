@@ -1,0 +1,153 @@
+
+
+<!DOCTYPE html>
+
+<html>
+
+<!--
+	This is a jQuery Tools standalone demo. Feel free to copy/paste.
+	                                                         
+	http://flowplayer.org/tools/demos/
+	
+	Do *not* reference CSS files and images from flowplayer.org when in production  
+
+	Enjoy!
+-->
+
+<head>
+	<title>Gallery Test</title>
+
+	<!-- include the Tools -->
+	<script src="http://cdn.jquerytools.org/1.2.6/full/jquery.tools.min.js"></script>
+	 
+
+	<!-- wrapper element for the large image -->
+	<div id="image_wrap">
+
+		<!-- Initially the image is a simple 1x1 pixel transparent GIF -->
+		<img src="http://static.flowplayer.org/tools/img/blank.gif" width="800" height="480" />
+
+	</div>
+	
+	<!-- standalone page styling (can be removed) -->
+	<link rel="stylesheet" type="text/css" href="http://static.flowplayer.org/tools/css/standalone.css"/>	
+
+	<link rel="stylesheet" type="text/css" href="scrollable-horizontal.css" />
+	<!--
+	<link rel="stylesheet" type="text/css" href="http://static.flowplayer.org/tools/css/scrollable-horizontal.css" />
+	-->
+	<link rel="stylesheet" type="text/css" href="scrollable-buttons.css" />
+<!--	<link rel="stylesheet" type="text/css" href="http://static.flowplayer.org/tools/css/scrollable-buttons.css" /> -->
+</head>
+
+<body>
+
+<!-- HTML structures -->
+
+
+<!-- "previous page" action -->
+<a class="prev browse left"></a>
+
+<!-- root element for scrollable -->
+<div class="scrollable">   
+   
+   <!-- root element for the items -->
+   <div class="items">
+   
+      <!-- 1-5 
+      <div>
+         <img src="./gallery1/tech_01.jpg" />
+         <img src="./gallery1/tech_02.jpg" />
+         <img src="./gallery1/tech_03.jpg" />
+		 <img src="./gallery1/tech_04.jpg" />
+		 <img src="./gallery1/city_01.jpg" />
+      </div>
+      -->
+	<div>
+         <img src="./gallery1/tech_01.jpg" />
+	</div>
+	<div>
+         <img src="./gallery1/tech_02.jpg" />
+	</div>
+	<div>
+         <img src="./gallery1/city_01.jpg" />
+	</div>
+	<div>
+         <img src="./gallery1/tech_03.jpg" />
+	</div>
+	<div>
+         <img src="./gallery1/tech_04.jpg" />
+	</div>
+</div>
+
+<!-- "next page" action -->
+<!-- <a class="next browse right"></a> -->
+
+<br clear="all" />
+
+<!-- javascript coding -->
+
+
+<script>
+// execute your scripts when the DOM is ready. this is mostly a good habit
+$(function() {
+
+	// initialize scrollable
+	$(".scrollable").scrollable();
+
+});
+
+$(".scrollable").scrollable();
+
+
+// $(".items img").click(function()
+$(".items img").click(function() {
+
+	// see if same thumb is being clicked
+	if ($(this).hasClass("active")) { return; }
+
+	// calclulate large image's URL based on the thumbnail URL (flickr specific)
+	
+	// in the above example replace the url assignment with this line
+	//var url = $(this).attr("alt");
+	
+	var url = $(this).attr("src").replace("_t", "");
+
+	// get handle to element that wraps the image and make it semi-transparent
+	var wrap = $("#image_wrap").fadeTo("medium", 0, function()
+	{
+		
+		// the large image from www.flickr.com
+		var img = new Image();
+
+
+		// call this function after it's loaded
+		img.onload = function() {
+
+			// make wrapper fully visible
+			wrap.fadeTo("medium", 1);
+
+			// change the image
+			wrap.find("img").attr("src", url);
+
+		};
+
+		// begin loading the image from www.flickr.com
+		img.src = url;
+
+		// activate item
+		$(".items img").removeClass("active");
+		$(this).addClass("active");
+		
+	});
+
+	
+
+// when page loads simulate a "click" on the first image
+}).filter(":first").click();
+</script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,154 @@
+
+#site {	
+	background:#131313;
+	font-size:12px;
+	width:800px;
+	height:550px;
+	margin:20px auto;	
+	overflow:hidden;
+	position:relative;
+}  
+
+
+
+/* scrollable items */
+#site .items {
+	width:20000em;	
+	clear:both;	
+	position:absolute;	
+}
+
+/* single item */
+#site .page {	
+	padding:0px 0pxpx;
+	width:800px;
+	float:left;	
+}
+
+/* title */
+#site h2 {
+	font-size:22px;
+	font-weight:normal;
+	margin:10px 0 0 0;
+	padding-bottom:15px;		
+}
+
+#site h2 em {
+	display:block;
+	font-size:14px;
+	color:#666;
+	font-style:normal;
+	margin-top:5px;
+}
+
+/* input fields 
+#wizard ul {
+	padding:0px !important;
+	margin:0px !important;
+}*/
+
+#site li {
+	list-style-type:none;
+	list-style-image:none;
+	margin-bottom:25px;	
+}
+
+#site label {
+	font-size:16px;	
+	display:block;
+}
+
+#site label strong {
+	color:#789;	
+	position:relative;
+	top:-1px;
+}
+
+#site label em {
+	font-size:11px;
+	color:#666;	
+	font-style:normal;
+}
+
+#site .text {
+	width:100%;
+	padding:5px;
+	color:#456;
+	letter-spacing:1px;
+}
+
+#site select {
+	border:1px solid #ccc;
+	width:94%;	
+	padding:4px;
+
+}
+
+#site label span {
+	color:#b8128f;
+	font-weight:bold;
+	position:relative;
+	top:4px;
+	font-size:20px;
+
+}
+
+#site .double label { 
+	width:50%;
+	float:left;
+}
+
+#site .double .text {
+	width:93%;	
+}
+
+#site .clearfix {
+	clear:left;
+	padding-top:10px;	
+}
+
+#site .right {
+	float:right;		
+}
+
+#site .error {
+	border:1px solid red;		
+}
+
+#site #menu {
+	margin: 0 auto;
+	padding-left: 175px;
+	height:35px;
+	//padding-left:25px !important;
+}
+
+/*
+#status{
+	margin: 0 auto;
+	align: center; 
+	
+}*/
+
+#menu li {
+	cursor: default ; 
+	list-style-type:none;
+	list-style-image:none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+	float:left;
+	color:#DDD;
+	padding:15px 30px;
+	background-image: url("./img/stripe.png");	
+	background-repeat:repeat-x;
+	background-repeat:repeat-y;
+}
+
+
+
+#menu li.active {
+	background-color:#b8128f;
+	font-weight:normal;		
+}
