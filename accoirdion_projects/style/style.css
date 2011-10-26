@@ -1,0 +1,7 @@
+body {
+  padding:10px 25px;
+  cursor:url("/sv/images/openhand.cur");
+}
+.gr {
+ cursor:url(/sv/images/openhand.cur), url(/sv/images/openhand.png), default;
+}
