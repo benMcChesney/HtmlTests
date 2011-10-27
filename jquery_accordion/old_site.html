@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<title>Combine IScroll and Accordion</title>
+
+<link rel="stylesheet" type="text/css" href="scrollbar.css">
+<link href="style/format.css" rel="stylesheet" type="text/css" />
+<link href="style/scroller.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"> </script>
+<script type="text/javascript" src="./js/accordion_js.js"> </script>
+
+<script type="application/javascript" src="./js/iscroll.js"></script>
+
+<script type="text/javascript">
+
+var myScroll;
+function loaded() {
+	myScroll = new iScroll('wrapper', { scrollbarClass: 'myScrollbar' });
+}
+
+document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+
+document.addEventListener('DOMContentLoaded', loaded, false);
+
+</script>
+
+
+</head>
+<body>
+<div id="heliosLogo">
+	 <img src="./img/helios_logo.png"/>
+	<div id="navMenu">
+	 	  <ul>
+		  	  <li><a href="">WHO WE ARE</a></li>
+			  <li><a href="">WHAT WE DO</a></li>
+			  <li><a href="">CONTACT US</a></li>
+		  </ul>
+	 </div>
+</div>
+ 
+<div id="wrapper">
+	
+	<div id="scroller">
+       	<div id="accordionWrapper">
+		
+       		<div class="accordionButton">
+				<div class="sideTitle">
+       			Enticing Project Title
+				</div>
+       			<img src="./img/tech_03.jpg" class="thumbnailImage"></img>
+				
+       		</div>
+       		<div class="accordionContent">
+       			
+       			<div id="projectText">
+       				<h1><b>Project</b><b class="projectTitleDetail"> Specific Project Title </b></h1>
+					<h1><b>Client</b><b class="projectTitleDetail"> Specific Client </b></h1>
+					<h1><b>Location</b><b class="projectTitleDetail"> Milky Way, Universe </b></h1>
+       				<h1><b>Technology/Hardware</b><b class="projectTitleDetail"> Everything under the sun </b></h1>
+       				<br/>
+       
+       				<p>Nam semper dignissim ornare. Aenean volutpat eleifend est, in molestie felis fermentum et. Phasellus ut nibh quam. Sed ultricies laoreet dapibus. Ut varius diam id dolor pretium pulvinar. Nulla velit dui, cursus in tristique scelerisque, placerat nec magna. In non orci eros. Nullam lobortis mauris vitae enim luctus venenatis. Aliquam at libero felis, ut aliquam neque. Vestibulum sed lorem non leo congue faucibus. Nam tincidunt lobortis tortor et tincidunt. Praesent vel libero adipiscing lectus fringilla ultricies. Nunc quis ligula dolor, in mollis est. Pellentesque luctus odio ac lacus laoreet dictum.</p>
+       
+       				<p>Praesent lobortis rhoncus metus quis dictum. Donec luctus est mattis magna placerat tristique. Pellentesque molestie, lectus et vestibulum lobortis, sem felis accumsan lorem, id sodales lacus augue nec odio. In vel diam in dolor ullamcorper imperdiet semper sed ipsum. Sed rhoncus felis eros, eget aliquam nisi. Nullam gravida tempor ultricies. Aenean rhoncus gravida orci, sed cursus nulla venenatis ac.</p>
+       			</div>
+       		</div>
+       		
+			
+       		<div class="accordionButton">
+       			<img src="./img/tech_04.jpg" class="thumbnailImage"></img>
+       			<div class="sideTitle">
+       			Enticing Project Title
+				</div>
+       		</div>
+       		<div class="accordionContent">	
+       			<div id="projectText">
+       				<h1>*PROJECT TITLE*</h1>
+       				<h2><b>Client</b></h2>
+       				<h3>*Client and Agency*</h3>
+       				<h3><a href="fakeLink">Agency</a> , <a href="fakeLink">Software Partner</a></h3>
+       				<h3>Implementation of several ground breaking technologies.</h3>
+       
+       				<p>Nam semper dignissim ornare. Aenean volutpat eleifend est, in molestie felis fermentum et. Phasellus ut nibh quam. Sed ultricies laoreet dapibus. Ut varius diam id dolor pretium pulvinar. Nulla velit dui, cursus in tristique scelerisque, placerat nec magna. In non orci eros. Nullam lobortis mauris vitae enim luctus venenatis. Aliquam at libero felis, ut aliquam neque. Vestibulum sed lorem non leo congue faucibus. Nam tincidunt lobortis tortor et tincidunt. Praesent vel libero adipiscing lectus fringilla ultricies. Nunc quis ligula dolor, in mollis est. Pellentesque luctus odio ac lacus laoreet dictum.</p>
+       
+       				<p>Praesent lobortis rhoncus metus quis dictum. Donec luctus est mattis magna placerat tristique. Pellentesque molestie, lectus et vestibulum lobortis, sem felis accumsan lorem, id sodales lacus augue nec odio. In vel diam in dolor ullamcorper imperdiet semper sed ipsum. Sed rhoncus felis eros, eget aliquam nisi. Nullam gravida tempor ultricies. Aenean rhoncus gravida orci, sed cursus nulla venenatis ac.</p>
+       			</div>
+       		</div>
+    		
+    		<div class="accordionButton">
+    			<img src="./img/city_01.jpg" class="thumbnailImage"></img>
+    			<div class="sideTitle">
+       			Enticing Project Title
+				</div>
+    		</div>
+    		<div class="accordionContent">
+    			<div id="projectText">
+    				<h1>*PROJECT TITLE*</h1>
+    				<h2><b>Client</b></h2>
+    				<h3>*Client and Agency*</h3>
+    				<h3><a href="fakeLink">Agency</a> , <a href="fakeLink">Software Partner</a></h3>
+    				<h3>Implementation of several ground breaking technologies.</h3>
+    
+    				<p>Nam semper dignissim ornare. Aenean volutpat eleifend est, in molestie felis fermentum et. Phasellus ut nibh quam. Sed ultricies laoreet dapibus. Ut varius diam id dolor pretium pulvinar. Nulla velit dui, cursus in tristique scelerisque, placerat nec magna. In non orci eros. Nullam lobortis mauris vitae enim luctus venenatis. Aliquam at libero felis, ut aliquam neque. Vestibulum sed lorem non leo congue faucibus. Nam tincidunt lobortis tortor et tincidunt. Praesent vel libero adipiscing lectus fringilla ultricies. Nunc quis ligula dolor, in mollis est. Pellentesque luctus odio ac lacus laoreet dictum.</p>
+    
+    				<p>Praesent lobortis rhoncus metus quis dictum. Donec luctus est mattis magna placerat tristique. Pellentesque molestie, lectus et vestibulum lobortis, sem felis accumsan lorem, id sodales lacus augue nec odio. In vel diam in dolor ullamcorper imperdiet semper sed ipsum. Sed rhoncus felis eros, eget aliquam nisi. Nullam gravida tempor ultricies. Aenean rhoncus gravida orci, sed cursus nulla venenatis ac.</p>
+    			</div>
+    		</div>
+    		
+    		<div class="accordionButton">
+       			<img src="./img/tech_01.jpg" class="thumbnailImage"></img>
+       			<div class="sideTitle">
+       			Enticing Project Title
+				</div>
+       		</div>
+       		<div class="accordionContent">
+       			<div id="projectText">
+       				<h1>*PROJECT TITLE*</h1>
+       				<h2><b>Client</b></h2>
+       				<h3>*Client and Agency*</h3>
+       				<h3><a href="fakeLink">Agency</a> , <a href="fakeLink">Software Partner</a></h3>
+       				<h3>Implementation of several ground breaking technologies.</h3>
+       
+       				<p>Nam semper dignissim ornare. Aenean volutpat eleifend est, in molestie felis fermentum et. Phasellus ut nibh quam. Sed ultricies laoreet dapibus. Ut varius diam id dolor pretium pulvinar. Nulla velit dui, cursus in tristique scelerisque, placerat nec magna. In non orci eros. Nullam lobortis mauris vitae enim luctus venenatis. Aliquam at libero felis, ut aliquam neque. Vestibulum sed lorem non leo congue faucibus. Nam tincidunt lobortis tortor et tincidunt. Praesent vel libero adipiscing lectus fringilla ultricies. Nunc quis ligula dolor, in mollis est. Pellentesque luctus odio ac lacus laoreet dictum.</p>
+       
+       				<p>Praesent lobortis rhoncus metus quis dictum. Donec luctus est mattis magna placerat tristique. Pellentesque molestie, lectus et vestibulum lobortis, sem felis accumsan lorem, id sodales lacus augue nec odio. In vel diam in dolor ullamcorper imperdiet semper sed ipsum. Sed rhoncus felis eros, eget aliquam nisi. Nullam gravida tempor ultricies. Aenean rhoncus gravida orci, sed cursus nulla venenatis ac.</p>
+       			</div>
+       		</div>
+		</div>
+		
+	</div>
+
+</div>
+
+
+</body>
+</html>

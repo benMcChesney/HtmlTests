@@ -1,0 +1,98 @@
+
+body {
+	font-size:12px;
+	-webkit-user-select:none;
+    -webkit-text-size-adjust:none;
+	font-family:helvetica;
+    background-image:url('./../images/site_bg_big.jpg');
+    background-repeat:no-repeat;
+    background-position:center; 
+	background-position:50% 0px; 
+    background-color:#000000;
+
+}
+
+.thumbnailWrapper
+{
+	margin:0 auto;
+	position:relative;
+	left:40px;
+}
+
+.Thumbnail
+{
+	float:center;
+}
+
+.SlideshowImage
+{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width:575px;
+	height:350px;
+	overflow: hidden
+}
+
+.ProjectDetail
+{
+	background-color:#131313;
+	color:#CDCDCD;
+	font-size:14px;
+	margin:0px;
+	padding:5px 5px;
+	width:575px;
+	
+}
+
+.ProjectDetail h2
+{
+	color:#4571ad;
+    font-size:14px;
+
+}
+
+
+.ProjectButton
+{
+	background-color:transparent;
+	color:#FBFBFB;
+	font-size:16px;
+	margin:0px;
+	width:575px;
+	height:350px;
+	overflow: hidden;
+	
+}
+
+.OutsideText
+{
+	
+}
+
+/* Navigation Menu */
+#heliosLogo
+{
+    position:absolute;
+    top:50%;
+    padding-left:35px;
+    margin:auto 0;
+    float:left; 
+}
+
+#navMenu a
+{
+  color:#4571ad;
+  a:link {color: #ffffff; text-decoration:none; }
+  a:active {color: #0000ff; text-decoration:none; }
+  a:visited {color: #ffff00; text-decoration:none; }
+  a:hover {color: #ff0000; text-decoration:none; }
+}
+
+#navMenu ul
+{
+    width:100px;
+    padding: 0;
+    margin-left: 0;
+    list-style-type: none;
+}

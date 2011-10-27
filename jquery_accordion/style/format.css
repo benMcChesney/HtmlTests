@@ -1,0 +1,183 @@
+
+body {
+	font-size:12px;
+	-webkit-user-select:none;
+    -webkit-text-size-adjust:none;
+	font-family:helvetica;
+    background-image:url('./../img/site_bg_big.jpg');
+    background-repeat:no-repeat;
+    background-position:center; 
+    background-color:#000000;
+}
+
+#projectText
+{
+	padding-left:8px;
+	color : #DDDDDD;
+	float : bottom ;	
+	width : 800px ;
+	margin: 0 auto ; 
+}
+
+.projectTitle
+{
+   
+}
+
+.projectTitleDetail
+{
+    color:#FFFFFF;
+}
+
+#projectText h1
+{
+	color:#4571ad;
+    font-size:14px;
+}
+
+#projectText h2
+{
+	color: #CDCDCD;
+	font-size: 16px;
+}
+
+#projectText h3
+{
+	color: #CDCDCD;
+	font-size: 14px;
+}
+
+
+
+#projectText a
+{
+	color : #4e84cc ;
+}
+
+#projectText p
+{
+	color : #ABABAB ; 
+	font-size: 12px;
+    width:500px;
+}
+
+#heliosLogo
+{
+    position:absolute;
+    top:50%;
+    padding-left:35px;
+    margin:auto 0;
+    float:left; 
+}
+
+#navMenu
+{
+  color:#4571ad;
+  top:10px; 
+  position:relative;  
+  left:35px;
+  bottom:0px;
+
+  
+}
+ 
+#navMenu a
+{
+  color:#4571ad;
+  a:link {color: #ffffff; text-decoration:none; }
+  a:active {color: #0000ff; text-decoration:none; }
+  a:visited {color: #ffff00; text-decoration:none; }
+  a:hover {color: #ff0000; text-decoration:none; }
+}
+
+#navMenu ul
+{
+    width:100px;
+    padding: 0;
+    margin-left: 0;
+    list-style-type: none;
+}
+
+#accordionWrapper {
+	width:800px;
+	margin-left: auto;
+	margin-right: auto;
+	}
+	
+.thumbnailImage
+{
+	padding-top:5px;
+	width:150px ;
+	height:85px ;
+}
+
+.thumbnailText
+{
+	font-size:32px;
+}
+
+.accordionButton {	
+	font-size:22px;
+	width: 800px;
+	height:250px;
+	float: left;
+	height 109px ; 
+	_float: none;  /* Float works in all browsers but IE6 */
+    background-color:transparent;
+	cursor: pointer;
+	color:#CBCBCB;
+	padding-left:6px;
+	padding-right:6px
+	padding-top:0px;
+}
+
+
+.sideTitle
+{
+   color:#4571ad;
+   background-color:transparent;
+   float:right;
+   position:relative;
+   left:-165px;
+   margin:0 0;
+   width:125px;
+   padding-left:0px;
+}
+.accordionButton img {	
+	width:506px;
+    height:235px;
+}
+	
+	
+.accordionContent {	
+
+	width:506px;
+	height:800px;
+	margin-left:4px;
+
+	background-color:#000000;
+	color:#DCDCDC;
+	float: left;
+	_float: none; /* Float works in all browsers but IE6 */
+	
+	}
+    
+    .accordionContent img {	
+
+	width:506px;
+	margin-left:4px;
+	}
+	
+/***********************************************************************************************************************
+ EXTRA STYLES ADDED FOR MOUSEOVER / ACTIVE EVENTS
+************************************************************************************************************************/
+
+.on {
+	color:#ACACAC;
+	
+	}
+	
+.over {
+	color:#FFFFFF;
+
+	}

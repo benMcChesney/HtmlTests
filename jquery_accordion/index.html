@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<title>iScroll demo: iOS Perfect Scrollbar</title>
+
+<link rel="stylesheet" type="text/css" href="./css/scrollbar.css">
+<link rel="stylesheet" type="text/css" href="./css/accordion.css">
+<link rel="stylesheet" type="text/css" href="./css/scroller.css">
+
+<script type="application/javascript" src="./js/iscroll.js"></script>
+<script type="application/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+
+
+<script type="text/javascript">
+
+
+var myScroll;
+var projectCount= 0;
+var projectsClosedHeight = 0;
+var detailHeight;
+function loaded() {
+	myScroll = new iScroll('wrapper', { scrollbarClass: 'myScrollbar' });
+	$('#thelist').find('li').each(function()
+	{
+		var topZ = 100;
+		
+		$(this).find('.ProjectDetail').slideUp(0);
+		
+		$(this).find('.thumbnail').each( function(index)
+		{
+			$(this).click(function()
+			{
+				var newImage = $(this).closest('li').find(".SlideshowImage")[index];
+				$(newImage).fadeOut(0);
+				$(newImage).css('zIndex', topZ);
+				$(newImage).fadeIn(500);
+				topZ++;
+				
+			});
+			
+		});
+		
+		projectCount++;
+	});
+	
+	projectsClosedHeight = projectCount * 350;
+	$("#scroller").css("height", projectsClosedHeight);
+	myScroll.refresh();
+	
+	$('.ProjectButton').click(function()
+	{
+		$('li').each(function()
+		{
+			$(this).find('.ProjectDetail').slideUp(500);
+		});
+		
+		detailHeight = $(this).parent().find('.ProjectDetail').height();
+		$(this).parent().find('.ProjectDetail').slideToggle({ queue:false, duration:500, complete: changeScrollHeight } );
+	});
+	
+	
+	function changeScrollHeight()
+	{
+		if($(this).css("display") === "none")
+		{
+			$("#scroller").css("height", projectsClosedHeight);
+		}
+		else
+		{
+			console.log(projectsClosedHeight + detailHeight);
+			$("#scroller").css("height", projectsClosedHeight + detailHeight);
+		}
+		
+		myScroll.refresh();
+	};
+}
+
+document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+
+document.addEventListener('DOMContentLoaded', loaded, false);
+
+
+</script>
+
+</head>
+<body>
+	<div id="heliosLogo">
+		 <img src="./images/helios_logo.png"/>
+		<div id="navMenu">
+		 	  <ul>
+			  	  <li><a href="">WHO WE ARE</a></li>
+				  <li><a href="">WHAT WE DO</a></li>
+				  <li><a href="">CONTACT US</a></li>
+			  </ul>
+		 </div>
+	</div>
+<div id="wrapper">
+	<div id="scroller">
+		<ul id="thelist">
+			<li>
+				<div class="sideTitle">
+	       			Enticing Project Title
+				</div>
+				<div class="ProjectButton">
+					<div class="SlideshowImage"><img src='./images/city_01.jpg' /></div>
+					<div class="SlideshowImage"><img src='./images/tech_01.jpg' /></div>
+					<div class="SlideshowImage"><img src='./images/tech_02.jpg' /></div>
+					<div class="SlideshowImage"><img src='./images/tech_03.jpg' /></div>
+					<div class="SlideshowImage"><img src='./images/tech_04.jpg' /></div>
+					
+				</div>
+				<div class="ProjectDetail">
+					<h2>Project Name: Descriptive Project Title</h2>
+					<h2>Client : Actual Synopsis of Client</h2>
+					<h2>Location: Milky Way Galaxy</h2>
+					<h2>Technology: Everything under the sun</h2>
+					<p>Es un hecho establecido hace demasiado tiempo que un lector se distraerá con el contenido del texto de un sitio mientras que mira su diseño. El punto de usar Lorem Ipsum es que tiene una distribución más o menos normal de las letras, al contrario de usar textos como por ejemplo "Contenido aquí, contenido aquí". Estos textos hacen parecerlo un español que se puede leer. Muchos paquetes de autoedición y editores de páginas web usan el Lorem Ipsum como su texto por defecto, y al hacer una búsqueda de "Lorem Ipsum" va a dar por resultado muchos sitios web que usan este texto si se encuentran en estado de desarrollo. Muchas versiones han evolucionado a través de los años, algunas veces por accidente, otras veces a propósito (por ejemplo insertándole humor y cosas por el estilo).
+					</p>
+					<div class="thumbnailWrapper">
+						<img class='thumbnail' src='./images/thumb01.jpg'></img>
+						<img class='thumbnail' src='./images/thumb02.jpg'></img>
+						<img class='thumbnail' src='./images/thumb03.jpg'></img>
+						<img class='thumbnail' src='./images/thumb04.jpg'></img>
+						<img class='thumbnail' src='./images/thumb05.jpg'></img>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="sideTitle">
+	       			Enticing Project Title
+				</div>
+				<div class="ProjectButton">
+					<img src='./images/tech_01.jpg' />
+				</div>
+				<div class="ProjectDetail">
+					<h2>Project Name: Descriptive Project Title</h2>
+					<h2>Client : Actual Synopsis of Client</h2>
+					<h2>Location: Milky Way Galaxy</h2>
+					<h2>Technology: Everything under the sun</h2>
+					<p>Es un hecho establecido hace demasiado tiempo que un lector se distraerá con el contenido del texto de un sitio mientras que mira su diseño. El punto de usar Lorem Ipsum es que tiene una distribución más o menos normal de las letras, al contrario de usar textos como por ejemplo "Contenido aquí, contenido aquí". Estos textos hacen parecerlo un español que se puede leer. Muchos paquetes de autoedición y editores de páginas web usan el Lorem Ipsum como su texto por defecto, y al hacer una búsqueda de "Lorem Ipsum" va a dar por resultado muchos sitios web que usan este texto si se encuentran en estado de desarrollo. Muchas versiones han evolucionado a través de los años, algunas veces por accidente, otras veces a propósito (por ejemplo insertándole humor y cosas por el estilo). Es un hecho establecido hace demasiado tiempo que un lector se distraerá con el contenido del texto de un sitio mientras que mira su diseño. El punto de usar Lorem Ipsum es que tiene una distribución más o menos normal de las letras, al contrario de usar textos como por ejemplo "Contenido aquí, contenido aquí". Estos textos hacen parecerlo un español que se puede leer. Muchos paquetes de autoedición y editores de páginas web usan el Lorem Ipsum como su texto por defecto, y al hacer una búsqueda de "Lorem Ipsum" va a dar por resultado muchos sitios web que usan este texto si se encuentran en estado de desarrollo. Muchas versiones han evolucionado a través de los años, algunas veces por accidente, otras veces a propósito (por ejemplo insertándole humor y cosas por el estilo).</p>
+					<div class="thumbnailWrapper">
+						<img class='thumbnail' src='./images/thumb01.jpg'></img>
+						<img class='thumbnail' src='./images/thumb02.jpg'></img>
+						<img class='thumbnail' src='./images/thumb03.jpg'></img>
+						<img class='thumbnail' src='./images/thumb04.jpg'></img>
+						<img class='thumbnail' src='./images/thumb05.jpg'></img>
+					</div>
+				
+				</div>
+			</li>
+			<li>
+				<div class="sideTitle">
+	       			Enticing Project Title
+				</div>
+				<div class="ProjectButton">
+					<img src='./images/tech_04.jpg' />
+				</div>
+				<div class="ProjectDetail">
+					<h2>Project Name: Descriptive Project Title</h2>
+					<h2>Client : Actual Synopsis of Client</h2>
+					<h2>Location: Milky Way Galaxy</h2>
+					<h2>Technology: Everything under the sun</h2>
+					<p>Es un hecho establecido hace demasiado tiempo que un lector se distraerá con el contenido del texto de un sitio mientras que mira su diseño. El punto de usar Lorem Ipsum es que tiene una distribución más o menos normal de las letras, al contrario de usar textos como por ejemplo "Contenido aquí, contenido aquí". Estos textos hacen parecerlo un español que se puede leer. Muchos paquetes de autoedición y editores de páginas web usan el Lorem Ipsum como su texto por defecto, y al hacer una búsqueda de "Lorem Ipsum" va a dar por resultado muchos sitios web que usan este texto si se encuentran en estado de desarrollo. Muchas versiones han evolucionado a través de los años, algunas veces por accidente, otras veces a propósito (por ejemplo insertándole humor y cosas por el estilo).
+					</p>
+						<div class="thumbnailWrapper">
+							<img class='thumbnail' src='./images/thumb01.jpg'></img>
+							<img class='thumbnail' src='./images/thumb02.jpg'></img>
+							<img class='thumbnail' src='./images/thumb03.jpg'></img>
+							<img class='thumbnail' src='./images/thumb04.jpg'></img>
+							<img class='thumbnail' src='./images/thumb05.jpg'></img>
+						</div>
+				</div>
+			
+			</li>
+			<li>
+				<div class="sideTitle">
+	       			Enticing Project Title
+				</div>
+				<div class="ProjectButton">
+					<img src='./images/tech_03.jpg' />
+				</div>
+				<div class="ProjectDetail">
+					<h2>Project Name: Descriptive Project Title</h2>
+					<h2>Client : Actual Synopsis of Client</h2>
+					<h2>Location: Milky Way Galaxy</h2>
+					<h2>Technology: Everything under the sun</h2>
+					<p>Es un hecho establecido hace demasiado tiempo que un lector se distraerá con el contenido del texto de un sitio mientras que mira su diseño. El punto de usar Lorem Ipsum es que tiene una distribución más o menos normal de las letras, al contrario de usar textos como por ejemplo "Contenido aquí, contenido aquí". Estos textos hacen parecerlo un español que se puede leer. Muchos paquetes de autoedición y editores de páginas web usan el Lorem Ipsum como su texto por defecto, y al hacer una búsqueda de "Lorem Ipsum" va a dar por resultado muchos sitios web que usan este texto si se encuentran en estado de desarrollo. Muchas versiones han evolucionado a través de los años, algunas veces por accidente, otras veces a propósito (por ejemplo insertándole humor y cosas por el estilo).</p>
+					<div class="thumbnailWrapper">
+						<img class='thumbnail' src='./images/thumb01.jpg'></img>
+						<img class='thumbnail' src='./images/thumb02.jpg'></img>
+						<img class='thumbnail' src='./images/thumb03.jpg'></img>
+						<img class='thumbnail' src='./images/thumb04.jpg'></img>
+						<img class='thumbnail' src='./images/thumb05.jpg'></img>
+					</div>	
+				</div>
+				
+			</li>
+			<li>
+				<div class="sideTitle">
+	       			Enticing Project Title
+				</div>
+				<div class="ProjectButton">
+					<img src='./images/tech_02.jpg' />
+				</div>
+				<div class="ProjectDetail">
+					<h2>Project Name: Descriptive Project Title</h2>
+					<h2>Client : Actual Synopsis of Client</h2>
+					<h2>Location: Milky Way Galaxy</h2>
+					<h2>Technology: Everything under the sun</h2>
+					<p>Es un hecho establecido hace demasiado tiempo que un lector se distraerá con el contenido del texto de un sitio mientras que mira su diseño. El punto de usar Lorem Ipsum es que tiene una distribución más o menos normal de las letras, al contrario de usar textos como por ejemplo "Contenido aquí, contenido aquí". Estos textos hacen parecerlo un español que se puede leer. Muchos paquetes de autoedición y editores de páginas web usan el Lorem Ipsum como su texto por defecto, y al hacer una búsqueda de "Lorem Ipsum" va a dar por resultado muchos sitios web que usan este texto si se encuentran en estado de desarrollo. Muchas versiones han evolucionado a través de los años, algunas veces por accidente, otras veces a propósito (por ejemplo insertándole humor y cosas por el estilo).
+					</p>
+						<div class="thumbnailWrapper">
+							<img class='thumbnail' src='./images/thumb01.jpg'></img>
+							<img class='thumbnail' src='./images/thumb02.jpg'></img>
+							<img class='thumbnail' src='./images/thumb03.jpg'></img>
+							<img class='thumbnail' src='./images/thumb04.jpg'></img>
+							<img class='thumbnail' src='./images/thumb05.jpg'></img>
+						</div>
+				</div>
+			</li>			
+		</ul>
+	</div>
+</div>
+
+
+</body>
+</html>
