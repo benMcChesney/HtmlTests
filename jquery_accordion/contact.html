@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<title>iScroll demo: iOS Perfect Scrollbar</title>
+
+<link rel="stylesheet" type="text/css" href="./css/scrollbar.css">
+<link rel="stylesheet" type="text/css" href="./css/accordion.css">
+<link rel="stylesheet" type="text/css" href="./css/scroller.css">
+
+<script type="application/javascript" src="./js/iscroll.js"></script>
+<script type="application/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+
+
+
+<script type="text/javascript">
+
+
+
+var myScroll;
+var projectCount= 0;
+var projectsClosedHeight = 0;
+var detailHeight;
+function loaded() {
+
+		 //Create scroller
+	myScroll = new iScroll('wrapper', { scrollbarClass: 'myScrollbar' });
+	$("#scroller").css("height", 1000 );
+}
+
+document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+
+document.addEventListener('DOMContentLoaded', loaded, false);
+
+
+
+</script>
+
+</head>
+<body>
+	<div id="heliosLogo">
+		 <img src="./images/helios_logo.png"/>
+		<div id="navMenu">
+			 <ul>
+			  	  <li><b><a href="about.html">WHO WE ARE</a></b></li>
+				  <li><b><a href="index.html">WHAT WE DO</a></b></li>
+				  <li><b><a href="contact.html">CONTACT US</a></b></li>
+			  </ul>
+		 </div>
+	</div>
+<div id="wrapper">
+	<div id="scroller">
+		<ul id="thelist">
+    		<li>
+    				<div style="flushImage">
+    				<a href="<http://maps.google.com/maps/place?cid=16501122020987283090&q=helios+Interactive&hl=en&ie=UTF8&ll=58.059486,-135.403627&spn=0.046443,0.087891&t=w&z=4&vpsrc=0"><img src="./assets/googleMaps.jpg" /></a>
+					</div>
+					<div class="contentArea">
+    				<h2 class="subHeader">MAIN <span class="ProjectDetailWhite">415.558.0511</span></h2>
+    				<h2 class="subHeader">SALES <span class="ProjectDetailWhite">650.888.8440</span></h2>
+    				<h2 class="subHeader">FAX <span class="ProjectDetailWhite">415.520.6900</span></h2>
+    				<p>301 8th Street, Suite 250
+					<br />
+    				San Francisco, CA 94103
+    				<br />
+					<br />
+    				info@heliosinteractive.com
+    				</p>
+				</div>
+			</li>			
+			
+			
+		</ul>
+	</div>
+</div>
+
+
+
+</body>
+</html>

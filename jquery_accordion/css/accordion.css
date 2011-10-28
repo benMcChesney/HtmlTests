@@ -7,7 +7,7 @@ body {
     background-image:url('./../images/site_bg_big.jpg');
     background-repeat:no-repeat;
     background-position:center; 
-	background-position:50% 0px; 
+	background-position:-250px 0px; 
     background-color:#000000;
 
 }
@@ -16,24 +16,49 @@ body {
 {
 	margin:0 auto;
 	position:relative;
-	left:40px;
+    margin: 0 auto;
 }
 
 .Thumbnail
 {
 	float:center;
+    padding:0 2px;
+    margin-left:0px;
 }
 
 .SlideshowImage
 {
 	position: absolute;
-	top: 0px;
-	left: 0px;
-	width:575px;
-	height:350px;
-	overflow: hidden
+	width:505px;
+	height:245px;
+	overflow: hidden;
+  
 }
 
+.flushImage
+{
+ padding:0px ; 
+ margin:0px ; 
+}
+
+.aboutUsItem
+{
+    color:#FFFFFF ;
+    margin:0px;
+	width:500px;
+	height:235px;
+	overflow: hidden;
+ 
+}
+.contentArea
+{
+    background-color:#131313;
+	color:#CDCDCD;
+	font-size:14px;
+	margin:0px;
+	padding:5px 5px;
+	width:500px;
+}
 .ProjectDetail
 {
 	background-color:#131313;
@@ -41,7 +66,7 @@ body {
 	font-size:14px;
 	margin:0px;
 	padding:5px 5px;
-	width:575px;
+	width:495px;
 	
 }
 
@@ -52,6 +77,17 @@ body {
 
 }
 
+.subHeader
+{
+ color:#4571ad;
+ font-size:14px;
+}
+.ProjectDetailWhite
+{
+    color:#c6c6c8 ; 
+}
+
+
 
 .ProjectButton
 {
@@ -59,8 +95,8 @@ body {
 	color:#FBFBFB;
 	font-size:16px;
 	margin:0px;
-	width:575px;
-	height:350px;
+	width:500px;
+	height:235px;
 	overflow: hidden;
 	
 }
@@ -83,16 +119,25 @@ body {
 #navMenu a
 {
   color:#4571ad;
+  text-decoration:none ;
+  font-weight: bold
+  
+  /*
   a:link {color: #ffffff; text-decoration:none; }
   a:active {color: #0000ff; text-decoration:none; }
   a:visited {color: #ffff00; text-decoration:none; }
-  a:hover {color: #ff0000; text-decoration:none; }
+  a:hover {color: #ff0000; text-decoration:none; }*/
 }
 
 #navMenu ul
 {
     width:100px;
     padding: 0;
-    margin-left: 0;
+    margin: 0 auto;
     list-style-type: none;
+     a:link {color: #ffffff; text-decoration:none; }
+     a:active {color: #0000ff; text-decoration:none; }
+     a:visited {color: #ffff00; text-decoration:none; }
+     a:hover {color: #ff0000; text-decoration:none; }
+     text-decoration:none;
 }
